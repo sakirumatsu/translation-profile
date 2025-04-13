@@ -52,6 +52,7 @@ const Contact = () => {
         <h3>or call me at:</h3>
         <p>+48 690 564 981</p>
       </div>
+      <footer className="footer">© Deniz Atıcı 2025</footer>
     </section>
   );
 };
