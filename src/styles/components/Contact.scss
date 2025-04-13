@@ -1,0 +1,46 @@
+@use "../base/variables" as *;
+
+.contact {
+  position: relative;
+  font-family: $font-open-sans;
+  background: $gradient-bg;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem;
+  gap: 3rem;
+
+  // Background image layer
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    opacity: 0.05;
+    background-image: url("../assets/contactImg.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .contact-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+
+  .social,
+  .phone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    div {
+      display: flex;
+      gap: 2rem;
+    }
+
+    p {
+      transform: scale(1.8);
+    }
+  }
+}

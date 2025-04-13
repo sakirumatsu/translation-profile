@@ -1,0 +1,40 @@
+@use "./base/variables" as *;
+@use "./components/Sidebar.scss";
+@use "./components/Hero.scss";
+@use "./components/App.scss";
+@use "./components/Services.scss";
+@use "./components/Contact.scss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: $gradient-bg;
+  margin: 0;
+  height: 100%;
+
+  * {
+    color: #fff; // Optional: light text color for contrast
+  }
+}
+
+.main-content {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+
+  // optional: hide scrollbar
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  scrollbar-width: none;
+}
+
+.hero,
+.services,
+.contact {
+  height: 100vh;
+  scroll-snap-align: start;
+}

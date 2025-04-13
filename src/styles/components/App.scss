@@ -1,0 +1,28 @@
+.layout {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  overflow: hidden;
+
+  main {
+    flex: 1;
+    overflow-y: auto; // ✅ allows scroll
+    height: 100vh; // ✅ required if you're using scroll snapping or full page sections
+    scroll-behavior: smooth;
+
+    // ✅ Hide scrollbar for WebKit (Chrome, Safari)
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    // ✅ Hide scrollbar for Firefox
+    scrollbar-width: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .layout {
+    display: flex;
+    flex-direction: column;
+  }
+}
