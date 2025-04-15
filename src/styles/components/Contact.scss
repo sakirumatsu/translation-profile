@@ -37,10 +37,17 @@
     div {
       display: flex;
       gap: 2rem;
+
+      a {
+        cursor: pointer;
+        z-index: 10;
+      }
     }
 
     p {
       transform: scale(1.8);
+      user-select: all !important;
+      cursor: text;
     }
   }
 

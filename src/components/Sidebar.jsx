@@ -3,9 +3,11 @@ import { FiMenu } from "react-icons/fi";
 import logo from "../assets/logo.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useLang } from "./LanguageContext";
 
 function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
+  const { setLang, t } = useLang(); // ✅ hook called inside
 
   useEffect(() => {
     AOS.init({
@@ -17,7 +19,7 @@ function Sidebar() {
 
   return (
     <div className="sidebar-container">
-      <div className="logo-header" data-aos="fade-right" data-aos-delay="100">
+      <div className="header" data-aos="fade-right" data-aos-delay="100">
         <img src={logo} alt="Logo" className="logo" />
         <button className="hamburger" onClick={() => setIsOpen(!isOpen)}>
           <FiMenu />
@@ -32,7 +34,7 @@ function Sidebar() {
           data-aos="fade-right"
           data-aos-delay="200"
         >
-          Profile
+          {t("nav.profile")}
         </a>
         <a
           href="#services"
@@ -41,7 +43,7 @@ function Sidebar() {
           data-aos="fade-right"
           data-aos-delay="300"
         >
-          Services
+          {t("nav.services")}
         </a>
         <a
           href="#contact"
@@ -50,8 +52,34 @@ function Sidebar() {
           data-aos="fade-right"
           data-aos-delay="400"
         >
-          Contact
+          {t("nav.contact")}
         </a>
+        <div className="language-icons">
+          <span
+            className="flag-icon flag-icon-gb"
+            title="English"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            onClick={() => setLang("en-GB")}
+            style={{ cursor: "pointer" }}
+          ></span>
+          <span
+            className="flag-icon flag-icon-dk"
+            title="Danish"
+            data-aos="fade-up"
+            data-aos-delay="400"
+            onClick={() => setLang("da")}
+            style={{ cursor: "pointer" }}
+          ></span>
+          <span
+            className="flag-icon flag-icon-pl"
+            title="Polish"
+            data-aos="fade-up"
+            data-aos-delay="400"
+            onClick={() => setLang("pl")}
+            style={{ cursor: "pointer" }}
+          ></span>
+        </div>
       </nav>
     </div>
   );

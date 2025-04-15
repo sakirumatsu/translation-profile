@@ -2,14 +2,17 @@ import React from "react";
 import { FaXTwitter, FaWhatsapp, FaUpwork } from "react-icons/fa6";
 import { IoIosMail } from "react-icons/io";
 import { CiLinkedin } from "react-icons/ci";
+import { useLang } from "./LanguageContext";
 
 const Contact = () => {
+  const { setLang, t } = useLang(); // ✅ hook called inside
+
   return (
     <section id="contact" className="contact">
-      <h2 className="contact-title">Contact</h2>
+      <h2 className="contact-title">{t("contact.title")}</h2>
 
       <div className="social">
-        <h3>Feel free to reach out via:</h3>
+        <h3>{t("contact.subtitle")}</h3>
         <div>
           <a
             href="https://x.com/Deniz48261798"
@@ -49,7 +52,7 @@ const Contact = () => {
         </div>
       </div>
       <div className="phone">
-        <h3>or call me at:</h3>
+        <h3>{t("contact.call")}</h3>
         <p>+48 690 564 981</p>
       </div>
       <footer className="footer">© Deniz Atıcı 2025</footer>

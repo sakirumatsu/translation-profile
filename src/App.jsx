@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import Services from "./components/Services";
 import Contact from "./components/Contact";
 import useScrollSpy from "./useScrollSpy";
+import LanguageProvider from "./components/LanguageContext";
 
 function App() {
   useScrollSpy(["profile", "services", "contact"]);
@@ -23,14 +24,16 @@ function App() {
   }, []);
 
   return (
-    <div className="layout">
-      <Sidebar />
-      <main className="main-content">
-        <Hero />
-        <Services />
-        <Contact />
-      </main>
-    </div>
+    <LanguageProvider>
+      <div className="layout">
+        <Sidebar />
+        <main className="main-content">
+          <Hero />
+          <Services />
+          <Contact />
+        </main>
+      </div>
+    </LanguageProvider>
   );
 }
 

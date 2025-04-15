@@ -7,34 +7,22 @@ import productImg from "../assets/product.png";
 import documentImg from "../assets/document.png";
 import transcriberImg from "../assets/transcriber.png";
 import personImg from "../assets/person.png";
-
-const servicesData = [
-  {
-    img: productImg,
-    title: "Product Translation",
-    desc: "I bring high-quality e-commerce translation services for each products on your website.",
-  },
-  {
-    img: documentImg,
-    title: "Document Translation",
-    desc: "We translate documents in any topics and deliver it with highest quality.",
-  },
-  {
-    img: transcriberImg,
-    title: "Transcription",
-    desc: "I transcribe audio/movies and produce documents quickly and accurately.",
-  },
-  {
-    img: personImg,
-    title: "Person to Person",
-    desc: "I can help translating document on phone or personal.",
-  },
-];
+import { useLang } from "./LanguageContext";
 
 function Services() {
+  const { t } = useLang(); // ✅ hook called inside
+  const translatedServices = t("services", { returnObjects: true });
+
+  const servicesData = [
+    { img: productImg },
+    { img: documentImg },
+    { img: transcriberImg },
+    { img: personImg },
+  ];
+
   return (
     <div id="services" className="services">
-      <h2 className="services-title">Services</h2>
+      <h2 className="services-title">{t("servicesTitle")}</h2>
       <Swiper
         modules={[Autoplay, Navigation, EffectCoverflow]}
         effect="coverflow"
@@ -57,10 +45,10 @@ function Services() {
           1024: { slidesPerView: 2 }, // desktop
         }}
       >
-        {servicesData.map((service, index) => (
+        {translatedServices.map((service, index) => (
           <SwiperSlide key={index}>
             <div className="service-box">
-              <img src={service.img} alt={service.title} />
+              <img src={servicesData[index]?.img || ""} alt={service.title} />
               <h3>{service.title}</h3>
               <p>{service.desc}</p>
             </div>

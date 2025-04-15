@@ -1,0 +1,110 @@
+{
+  "en-GB": {
+    "nav": {
+      "profile": "Profile",
+      "services": "Services",
+      "contact": "Contact"
+    },
+    "hero": {
+      "name": "Deniz Atici",
+      "title": "Your translator",
+      "description": "18 years deep into bridging Danish and Polish, one word at a time. It started with helping friends and family, and turned into translating websites, phone calls, and everything in between. I love the puzzle of language — finding the right words that feel right on both sides."
+    },
+    "servicesTitle": "Services",
+    "services": [
+      {
+        "title": "Product Translation",
+        "desc": "I bring high-quality e-commerce translation services for each product on your website."
+      },
+      {
+        "title": "Document Translation",
+        "desc": "We translate documents on any topic and deliver them with the highest quality."
+      },
+      {
+        "title": "Transcription",
+        "desc": "I transcribe audio or movies quickly and accurately."
+      },
+      {
+        "title": "Person to Person",
+        "desc": "I can help translate documents over the phone or in person."
+      }
+    ],
+    "contact": {
+      "title": "Contact",
+      "subtitle": "Feel free to reach out via:",
+      "call": "or call me at:"
+    }
+  },
+  "pl": {
+    "nav": {
+      "profile": "Profil",
+      "services": "Usługi",
+      "contact": "Kontakt"
+    },
+    "hero": {
+      "name": "Deniz Atici",
+      "title": "Twój tłumacz",
+      "description": "18 lat doświadczenia w łączeniu duńskiego i polskiego, słowo po słowie. Zaczęło się od pomocy rodzinie i znajomym, a przerodziło się w tłumaczenia stron internetowych, rozmów telefonicznych i wszystkiego pomiędzy. Uwielbiam łamigłówki językowe — znajdowanie odpowiednich słów, które brzmią naturalnie po obu stronach."
+    },
+    "servicesTitle": "Usługi",
+    "services": [
+      {
+        "title": "Tłumaczenie produktów",
+        "desc": "Oferuję wysokiej jakości tłumaczenia produktów e-commerce na Twojej stronie."
+      },
+      {
+        "title": "Tłumaczenie dokumentów",
+        "desc": "Tłumaczymy dokumenty na każdy temat, zawsze z najwyższą jakością."
+      },
+      {
+        "title": "Transkrypcja",
+        "desc": "Szybko i dokładnie transkrybuję nagrania audio lub filmy."
+      },
+      {
+        "title": "Tłumaczenia osobiste",
+        "desc": "Pomagam w tłumaczeniu dokumentów przez telefon lub osobiście."
+      }
+    ],
+    "contact": {
+      "title": "Kontakt",
+      "subtitle": "Skontaktuj się ze mną przez:",
+      "call": "lub zadzwoń pod:"
+    }
+  },
+  "da": {
+    "nav": {
+      "profile": "Profil",
+      "services": "Tjenester",
+      "contact": "Kontakt"
+    },
+    "hero": {
+      "name": "Deniz Atici",
+      "title": "Din oversætter",
+      "description": "18 års erfaring med at bygge bro mellem dansk og polsk, ét ord ad gangen. Det begyndte med at hjælpe venner og familie, og udviklede sig til at oversætte websteder, telefonopkald og alt derimellem. Jeg elsker sprogets puslespil — at finde de rette ord, der føles rigtige på begge sprog."
+    },
+    "servicesTitle": "Tjenester",
+    "services": [
+      {
+        "title": "Produktoversættelse",
+        "desc": "Jeg tilbyder e-handelsoversættelser af høj kvalitet til dine produkter."
+      },
+      {
+        "title": "Dokumentoversættelse",
+        "desc": "Vi oversætter dokumenter om ethvert emne med højeste kvalitet."
+      },
+      {
+        "title": "Transskription",
+        "desc": "Jeg transskriberer lyd eller film hurtigt og præcist."
+      },
+      {
+        "title": "Personlig oversættelse",
+        "desc": "Jeg hjælper med dokumentoversættelse via telefon eller personligt."
+      }
+    ],
+    "contact": {
+      "title": "Kontakt",
+      "subtitle": "Du kan kontakte mig via:",
+      "call": "eller ring på:"
+    }
+  }
+}

@@ -16,6 +16,10 @@ body {
 
   * {
     color: #fff; // Optional: light text color for contrast
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
   }
 }
 
