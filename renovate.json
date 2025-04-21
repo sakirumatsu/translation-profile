@@ -1,39 +1,62 @@
 {
-  "extends": ["config:base"],
+  "extends": [
+    "config:recommended"
+  ],
   "dependencyDashboard": true,
   "prHourlyLimit": 2,
   "prConcurrentLimit": 5,
   "packageRules": [
     {
       "groupName": "react packages",
-      "matchPackagePatterns": ["^react", "react-dom"],
-      "groupSlug": "react"
+      "groupSlug": "react",
+      "matchPackageNames": [
+        "/^react/",
+        "/react-dom/"
+      ]
     },
     {
       "groupName": "vite & plugins",
-      "matchPackagePatterns": ["^vite", "@vitejs/"],
-      "groupSlug": "vite"
+      "groupSlug": "vite",
+      "matchPackageNames": [
+        "/^vite/",
+        "/@vitejs//"
+      ]
     },
     {
       "groupName": "eslint plugins",
-      "matchPackagePatterns": ["^eslint", "eslint-", "@eslint/"],
-      "groupSlug": "eslint"
+      "groupSlug": "eslint",
+      "matchPackageNames": [
+        "/^eslint/",
+        "/eslint-/",
+        "/@eslint//"
+      ]
     },
     {
       "groupName": "type definitions",
-      "matchPackagePatterns": ["^@types/"],
-      "groupSlug": "types"
+      "groupSlug": "types",
+      "matchPackageNames": [
+        "/^@types//"
+      ]
     },
     {
       "description": "Auto-merge devDependencies on patch/minor",
-      "matchDepTypes": ["devDependencies"],
-      "matchUpdateTypes": ["minor", "patch"],
+      "matchDepTypes": [
+        "devDependencies"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
       "automerge": true
     },
     {
       "description": "Auto-merge production deps on patch only",
-      "matchDepTypes": ["dependencies"],
-      "matchUpdateTypes": ["patch"],
+      "matchDepTypes": [
+        "dependencies"
+      ],
+      "matchUpdateTypes": [
+        "patch"
+      ],
       "automerge": true
     }
   ]
