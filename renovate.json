@@ -1,3 +1,31 @@
 {
-  "extends": ["config:base"]
+  "extends": ["config:base"],
+  "dependencyDashboard": true,
+  "npm": {
+    "enabled": true
+  },
+  "packageRules": [
+    {
+      "groupName": "react packages",
+      "matchPackagePatterns": ["^react", "react-dom"],
+      "groupSlug": "react"
+    },
+    {
+      "groupName": "vite & plugins",
+      "matchPackagePatterns": ["^vite", "@vitejs/"],
+      "groupSlug": "vite"
+    },
+    {
+      "groupName": "eslint plugins",
+      "matchPackagePatterns": ["^eslint", "eslint-", "@eslint/"],
+      "groupSlug": "eslint"
+    },
+    {
+      "groupName": "type definitions",
+      "matchPackagePatterns": ["^@types/"],
+      "groupSlug": "types"
+    }
+  ],
+  "prHourlyLimit": 2,
+  "prConcurrentLimit": 5
 }
