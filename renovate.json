@@ -1,9 +1,8 @@
 {
   "extends": ["config:base"],
   "dependencyDashboard": true,
-  "npm": {
-    "enabled": true
-  },
+  "prHourlyLimit": 2,
+  "prConcurrentLimit": 5,
   "packageRules": [
     {
       "groupName": "react packages",
@@ -24,8 +23,18 @@
       "groupName": "type definitions",
       "matchPackagePatterns": ["^@types/"],
       "groupSlug": "types"
+    },
+    {
+      "description": "Auto-merge devDependencies on patch/minor",
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true
+    },
+    {
+      "description": "Auto-merge production deps on patch only",
+      "matchDepTypes": ["dependencies"],
+      "matchUpdateTypes": ["patch"],
+      "automerge": true
     }
-  ],
-  "prHourlyLimit": 2,
-  "prConcurrentLimit": 5
+  ]
 }
