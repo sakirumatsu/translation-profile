@@ -3,12 +3,11 @@ import { Autoplay, Navigation, EffectCoverflow } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-coverflow";
-import productImg from "../assets/product.png";
-import documentImg from "../assets/document.png";
-import transcriberImg from "../assets/transcriber.png";
-import personImg from "../assets/person.png";
-import { useLang } from "./LanguageContext";
-
+import productImg from "../assets/product.webp";
+import documentImg from "../assets/document.webp";
+import transcriberImg from "../assets/transcriber.webp";
+import personImg from "../assets/person.webp";
+import useLang from "./UseLang";
 function Services() {
   const { t } = useLang(); // ✅ hook called inside
   const translatedServices = t("services", { returnObjects: true });

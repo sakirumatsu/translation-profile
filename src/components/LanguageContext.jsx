@@ -1,9 +1,7 @@
-import { createContext, useContext, useState, useEffect } from "react";
+import { createContext, useState, useEffect } from "react";
 import translations from "../assets/translation.json";
 
-const LanguageContext = createContext();
-
-export const useLang = () => useContext(LanguageContext);
+export const LanguageContext = createContext();
 
 const LanguageProvider = ({ children }) => {
   const [lang, setLang] = useState("en-GB");

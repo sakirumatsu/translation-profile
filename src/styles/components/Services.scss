@@ -73,3 +73,11 @@
     transform: translateY(-50%);
   }
 }
+
+@media (max-width: 768px) {
+  .services {
+    .services-title {
+      font-size: 2rem;
+    }
+  }
+}

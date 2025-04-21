@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
 import { FiMenu } from "react-icons/fi";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo.webp";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useLang } from "./LanguageContext";
-
+import useLang from "./UseLang";
 function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
   const { setLang, t } = useLang(); // ✅ hook called inside

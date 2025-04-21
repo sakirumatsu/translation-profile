@@ -2,10 +2,10 @@ import React from "react";
 import { FaXTwitter, FaWhatsapp, FaUpwork } from "react-icons/fa6";
 import { IoIosMail } from "react-icons/io";
 import { CiLinkedin } from "react-icons/ci";
-import { useLang } from "./LanguageContext";
+import useLang from "./UseLang";
 
 const Contact = () => {
-  const { setLang, t } = useLang(); // ✅ hook called inside
+  const { t } = useLang(); // ✅ hook called inside
 
   return (
     <section id="contact" className="contact">

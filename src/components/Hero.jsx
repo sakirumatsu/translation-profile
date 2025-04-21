@@ -1,10 +1,9 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useLang } from "./LanguageContext";
-
+import useLang from "./UseLang";
 function Hero() {
-  const { setLang, t } = useLang(); // ✅ hook called inside
+  const { t } = useLang(); // ✅ hook called inside
 
   useEffect(() => {
     AOS.init({
@@ -13,7 +12,6 @@ function Hero() {
       delay: 100,
       once: false,
     });
-
     // Important if content is dynamically rendered
     AOS.refresh();
   }, []);
